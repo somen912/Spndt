@@ -1,0 +1,204 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 2% auto;
+}
+
+.tool-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-section{
+    width: 60%;
+}
+
+.button-section{
+    text-align: center;
+    padding: 2%;
+}
+
+#save-button{
+    width:20%;
+}
+
+#print-button{
+    width:20%;
+}
+
+.summery-section{
+    width:36%
+}
+
+
+.custom-span{
+    position: absolute;
+    left: 75%;
+}
+
+
+.custom-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% auto;
+}
+
+.input-style{
+    width: 50%;
+}
+
+.form-leftsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-select{
+    width: 40%;
+}
+
+/* Chart section */
+
+.chart-section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 5%;
+    border-radius: 5%;
+}
+
+.income-stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.details{
+    text-align: left;
+    width: 30%;
+    font-size: 70%;
+}
+
+.details ul{
+    list-style: none;
+    padding-left: 0%;
+}
+
+.Percentage{
+    text-align: right;
+    font-weight: bold;
+}
+
+.accordion-header button{
+    font-weight: 500;
+}
+
+.summery-result{
+    text-align: left;
+    position: relative;
+    padding: 2%;
+}
+
+.summery-result span{
+    position: absolute;
+    right: 1%;
+}
+
+.footer-section{
+    text-align: center;
+    padding: 2%;
+    margin-top: 5%;
+}
+
+.social-icons a{
+    color: black;
+}
+
+.social-icons i{
+    font-size: 30px;
+}
+
+.social-icons i:hover{
+    color: aliceblue;
+}
+
+@media screen and (max-width: 900px) {
+
+    h1{
+        font-size: 25px;
+        padding: 2% 0%;
+    }
+
+    #accordionExample{
+        width: 100%;
+        margin: 0% auto;
+    }
+
+    .tool-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .chart-container{
+        padding: 5%;
+    }
+
+    .my-chart{
+        width:100%;
+        position: relative;
+        width:100px;
+    }
+
+    .summery-section{
+        width:100%;
+        padding: 0%;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .chart-section{
+        margin-bottom: 5%;
+        width: 100%;
+    }
+
+    .income-stats{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        margin: 0%;
+       
+    }
+
+    .income-stats .details{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .details span{
+        position: absolute;
+        right:10%
+    }
+
+    .form-section{
+        width: 100%;
+    }
+
+    .custom-span{
+        position: absolute;
+        left: 60%;
+    }
+
+
+
+}

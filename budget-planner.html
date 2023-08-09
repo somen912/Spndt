@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Budget Planner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation section -->
+    <div class="container-fluid bg-warning">
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i> Menu</button>
+
+        <div class="offcanvas offcanvas-start bg-warning" data-bs-scroll="true" tabindex="-1"
+            id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><a class="navbar-brand" href="index.html">
+                        <i class="fa-solid fa-piggy-bank"></i> Spndt</a></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <p><a href="index.html"></a>Home</p>
+                <p><a href="#"></a>Budget Planner</p>
+                <p><a href="#"></a>Coming Soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+
+    <div class="container">
+        <h1>Plan Your Monthly Budget</h1>
+
+        <div class="container-fluid tool-section">
+
+            <div class="form-section">
+
+
+
+                <!-- Income Section -->
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Income <div class="total-income custom-span"><span>0.00 </span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <form>
+                                    <!-- Income form -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Your Income</label>
+                                        <div class="form-leftsection">
+                                            <input id="income-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="income-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Goal form -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Your Savings Goal</label>
+                                        <div class="form-leftsection">
+                                            <input id="income-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="income-select2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Tax Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Tax <div class="total-tax custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Income Tax -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Income Tax</label>
+                                        <div class="form-leftsection">
+                                            <input id="tax-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="tax-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Property Tax -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Property Tax</label>
+                                        <div class="form-leftsection">
+                                            <input id="tax-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="tax-select2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- House Hold Bill Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Household Bill <div class="total-housebill custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Rent -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Room Rent</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Home Insaurance -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Home Insaurance</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Home Maintenance -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Home Maintenance</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- GAS -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">GAS Bill</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Electricity Bill -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Electricity Bill</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input5" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Water Bill -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Water Bill</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input6" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select6" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Bill -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Phone Bill</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input7" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select7" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Internet / Broadband -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Internet / Broadband</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input8" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select8" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Cable / DTH Connection -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Cable / DTH Connection</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input9" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select9" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Antivirus & other IT costs -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Antivirus & Other IT
+                                            Costs</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input10" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select10" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Electrician / Plumbing -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Electrician / Plumbing</label>
+                                        <div class="form-leftsection">
+                                            <input id="house-input11" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="house-select11" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- Living Cost Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Living Cost <div class="total-livingcost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Grocery -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Grocery</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fruits & Vegetables -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Fruits & Vegetables</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dairy -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Dairy</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Clothes -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Clothes</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shoes -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Shoes</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input5" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Toiletries -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Toiletries</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input6" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select6" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Mess -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Mess</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input7" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select7" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- Hair Dressing -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Hair Dressing</label>
+                                        <div class="form-leftsection">
+                                            <input id="living-input8" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="living-select8" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Education Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Education <div class="total-educationcost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- School fee -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">School Fee</label>
+                                        <div class="form-leftsection">
+                                            <input id="education-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="education-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weely</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Uniform -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Uniform</label>
+                                        <div class="form-leftsection">
+                                            <input id="education-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="education-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Books -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Books</label>
+                                        <div class="form-leftsection">
+                                            <input id="education-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="education-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stationary -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Stationary Items</label>
+                                        <div class="form-leftsection">
+                                            <input id="education-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="education-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- Medical Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Medical <div class="total-medicalcost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Prescriptions & Medicine -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Prescriptions &
+                                            Medicines</label>
+                                        <div class="form-leftsection">
+                                            <input id="medical-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="medical-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Health Checkup -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Health Checkup</label>
+                                        <div class="form-leftsection">
+                                            <input id="medical-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="medical-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Eye Check up -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Eye Checkup</label>
+                                        <div class="form-leftsection">
+                                            <input id="medical-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="medical-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dental Checkup -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Dental Checkup</label>
+                                        <div class="form-leftsection">
+                                            <input id="medical-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="medical-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Transportation Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Transportation <div class="total-transportcost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Public Transport -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Public Transport</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Private Transport -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Private Transport</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- School Bus -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">School Bus</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Flight -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Flight</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Railway -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Railway</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input5" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2 Wheeler -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">2 Wheeler Repair</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input6" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-select6" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- 4 Wheeler -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">4 Wheeler Repair</label>
+                                        <div class="form-leftsection">
+                                            <input id="transport-input7" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="transport-select7" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Insurance Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Insurance <div class="total-insurance custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Life Insurance -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Life Insurance</label>
+                                        <div class="form-leftsection">
+                                            <input id="insurance-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="insurance-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Health Insurance -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Health Insurance</label>
+                                        <div class="form-leftsection">
+                                            <input id="insurance-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="insurance-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Car Insurance -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Car Insurance</label>
+                                        <div class="form-leftsection">
+                                            <input id="insurance-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="insurance-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Loan EMI Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Loan EMI <div class="total-emicost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- student loan -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Student Loan</label>
+                                        <div class="form-leftsection">
+                                            <input id="loan-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="loan-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Home Loan -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Home Loan</label>
+                                        <div class="form-leftsection">
+                                            <input id="loan-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="loan-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Car loan -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Car Loan</label>
+                                        <div class="form-leftsection">
+                                            <input id="loan-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="loan-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bike loan -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Bike Loan</label>
+                                        <div class="form-leftsection">
+                                            <input id="loan-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="loan-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Personal loan -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Personal Loan</label>
+                                        <div class="form-leftsection">
+                                            <input id="loan-input5" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="loan-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Credit card -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Credit card</label>
+                                        <div class="form-leftsection">
+                                            <input id="loan-input6" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="loan-select6" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Family & Friends Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                Family & Friends <div class="total-familycost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Parents -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Parents</label>
+                                        <div class="form-leftsection">
+                                            <input id="family-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="family-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Support for relatives -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Support for Relatives</label>
+                                        <div class="form-leftsection">
+                                            <input id="family-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="family-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pets -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Pet</label>
+                                        <div class="form-leftsection">
+                                            <input id="family-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="family-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Donation -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Donation</label>
+                                        <div class="form-leftsection">
+                                            <input id="family-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="family-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Club & Activity -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Club & Activity</label>
+                                        <div class="form-leftsection">
+                                            <input id="family-input5" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="family-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Entertainment Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                Entertainment <div class="total-entertainmentcost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- OTT -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">OTT Subscription</label>
+                                        <div class="form-leftsection">
+                                            <input id="entertainment-input1" class="form-control input-style"
+                                                type="text" value="0">
+
+                                            <select id="entertainment-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Eating Out -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Eating Out</label>
+                                        <div class="form-leftsection">
+                                            <input id="entertainment-input2" class="form-control input-style"
+                                                type="text" value="0">
+
+                                            <select id="entertainment-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sports & GYM -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Sports & GYM</label>
+                                        <div class="form-leftsection">
+                                            <input id="entertainment-input3" class="form-control input-style"
+                                                type="text" value="0">
+
+                                            <select id="entertainment-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Newspaper -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Newspaper & Magazine</label>
+                                        <div class="form-leftsection">
+                                            <input id="entertainment-input4" class="form-control input-style"
+                                                type="text" value="0">
+
+                                            <select id="entertainment-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Holidays -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Holidays</label>
+                                        <div class="form-leftsection">
+                                            <input id="entertainment-input5" class="form-control input-style"
+                                                type="text" value="0">
+
+                                            <select id="entertainment-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Investment Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                Investment <div class="total-investmentcost custom-span"><span>0.00</span> <i
+                                        class="fa-solid fa-indian-rupee-sign"></i></div>
+                            </button>
+                        </h2>
+                        <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <!-- Shares -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Shares</label>
+                                        <div class="form-leftsection">
+                                            <input id="invest-input1" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="invest-select1" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mutual fund -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Mutual Fund</label>
+                                        <div class="form-leftsection">
+                                            <input id="invest-input2" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="invest-input2" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bond -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Bond</label>
+                                        <div class="form-leftsection">
+                                            <input id="invest-input3" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="invest-select3" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fixed Deposit -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Fixed Deposit</label>
+                                        <div class="form-leftsection">
+                                            <input id="invest-input4" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="invest-select4" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- PF -->
+                                    <div class="form-group custom-form">
+                                        <label class="form-rightsection" for="for Income">Provident Fund</label>
+                                        <div class="form-leftsection">
+                                            <input id="invest-input5" class="form-control input-style" type="text"
+                                                value="0">
+
+                                            <select id="invest-select5" class="form-select custom-select"
+                                                aria-label="Default select example">
+                                                <option selected value="4">Weekly</option>
+                                                <option value="1">Monthly</option>
+                                                <option value="3">Quaterly</option>
+                                                <option value="6">Half Yearly</option>
+                                                <option value="12">Annual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="button-section">
+                    <button id="save-button" class="btn btn-warning" type="submit">Save</button>
+                    <button id="print-button" class="btn btn-warning" type="submit">Print</button>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="summery-section">
+                <div class="chart-section">
+                    <h3>Spending Breakdown</h3>
+
+                    <div class="income-stats">
+                        <div class="chart-container">
+                            <canvas class="my-chart">
+
+                            </canvas>
+                        </div>
+
+                        <div class="details">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>Summery</h3>
+                    <div class="summery-result">
+                        <h4 class="net-income">Income: <span>0 INR</span></h4>
+                        <h4 class="net-exp">Expenditure: <span>0 INR</span></h4>
+                        <hr>
+                        <h4 class="net-saving">Savings: <span>0 INR</span></h4>
+                        <p>Welcome to my tool</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- footer section -->
+
+    <footer class="bg-warning footer-section">
+        <div class="footer-text">
+            <p>&#169; somen das 2023</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/somen-das-6a933115a/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/somen912"><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/budge-planner.js"></script>
+</body>
+
+</html>
